@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import Währungsrechner.Currency;
+
 public class Umrechner {
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -31,10 +34,10 @@ public class Umrechner {
 		for (Currency währungsname: currencyListe) {
 			if (währungsname.Währungsname.equals(inputName)) {
 				System.out.println("Ihre eingegebene Währung: "+inputName);
-			break;
+				break;
 
 				}
-			}
+		}
 
 
 			System.out.println("Bitte geben Sie den Geldwert ein: ");
@@ -50,16 +53,16 @@ public class Umrechner {
 
 
 
-			if(inputChar == "j")	{
+		if(inputChar == "j")	{
 				continue;
-			}
+		}
 
 			else if (inputChar.contentEquals("n"))  {
 					break;
-				}
-			else {
-				System.out.println("Diese Eingabe ist nicht zulässig!");
 			}
+				else {
+					System.out.println("Diese Eingabe ist nicht zulässig!");
+				}
 
 		System.out.println("Ihr eingegebener Geldwert: "+inputZahl);
 			
