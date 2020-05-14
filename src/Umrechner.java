@@ -64,8 +64,8 @@ public class Umrechner {
 		
 			
 		
-		
 		} while (true);
 	}
 
 }
+
