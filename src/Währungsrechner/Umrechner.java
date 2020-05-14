@@ -1,3 +1,4 @@
+package Währungsrechner;
 import java.util.ArrayList;
 import java.util.Scanner;
 import Währungsrechner.Currency;
@@ -29,12 +30,14 @@ public class Umrechner {
 			Scanner sc = new Scanner(System.in); 
 			String inputName = sc.nextLine();
 
-
+			Currency waehrungsergebnis = null;
 
 		for (Currency währungsname: currencyListe) {
 			if (währungsname.Währungsname.equals(inputName)) {
 				System.out.println("Ihre eingegebene Währung: "+inputName);
-				break;
+				waehrungsergebnis = währungsname;
+				return;
+				
 
 				}
 		}
@@ -45,15 +48,18 @@ public class Umrechner {
 			double inputZahl = sc2.nextDouble();
 			System.out.println("Ihr eingegebener Geldwert: "+inputZahl);
 
+			Calculation.calculation(waehrungsergebnis.kurs, inputZahl);
+			System.out.println("Das Ergebnis beträgt: "+ Calculation.ergebnis);
 
-
+			
+			
 			System.out.println("Möchten Sie das Programm fortsetzen? Bitte geben sie 'j' für ja oder 'n' für nein ein: ");
 			Scanner sc3 = new Scanner(System.in);
 			String inputChar = sc3.nextLine();
 
-
-
-		if(inputChar == "j")	{
+		
+			
+	if(inputChar == "j")	{
 				continue;
 		}
 
@@ -69,6 +75,9 @@ public class Umrechner {
 
 
 		} while (true);
+	
+	
 	}
+	
 
 }
