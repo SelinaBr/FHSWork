@@ -2,9 +2,15 @@ package Währungsrechner;
 
 public class Currency {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	public String Währungsname;
+	public String Währungsabkürzung;
+	public double Kurs;
+	
+	
+public Currency (String währungsname, String abkürzung, double kurs) {
+	this.Währungsname = währungsname;
+	this.Währungsabkürzung = abkürzung;
+	this.Kurs = kurs;
+	
+}
 }
