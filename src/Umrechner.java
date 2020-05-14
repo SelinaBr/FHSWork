@@ -22,27 +22,50 @@ public class Umrechner {
 		
 		System.out.println("Willkommen bei Currency");
 		
-		System.out.println("Bitte geben Sie die Währung ein: ");
-		Scanner sc = new Scanner(System.in); 
-		String inputName = sc.nextLine();
+		do {
+			System.out.println("Bitte geben Sie die Währung ein: ");
+			Scanner sc = new Scanner(System.in); 
+			String inputName = sc.nextLine();
 		
 		
-		System.out.println("Bitte geben Sie den Geldwert ein: ");
-		Scanner sc2 = new Scanner(System.in); 
-		double inputZahl = sc2.nextDouble();
+		 
 		
-		for (Currency währungsname: currencyListe) {
-			if (währungsname.Währungsname.equals(inputName)) {
-				System.out.println("Ihre eingegebene Währung: "+inputName);
-			break;
+		
+			for (Currency währungsname: currencyListe) {
+				if (währungsname.Währungsname.equals(inputName)) {
+					System.out.println("Ihre eingegebene Währung: "+inputName);
+					break;
+				}
 			}
 			
-		}
+			System.out.println("Bitte geben Sie den Geldwert ein: ");
+			Scanner sc2 = new Scanner(System.in); 
+			double inputZahl = sc2.nextDouble();
+			System.out.println("Ihr eingegebener Geldwert: "+inputZahl);
+			
+			
+		
+			System.out.println("Möchten Sie das Programm fortsetzen? Bitte geben sie 'j' für ja oder 'n' für nein ein: ");
+			Scanner sc3 = new Scanner(System.in);
+			String inputChar = sc3.nextLine();
 		
 		
-		System.out.println("Ihr eingegebener Geldwert: "+inputZahl);
+			
+			if(inputChar == "j")	{
+				continue;
+			}
+			
+			else if (inputChar.contentEquals("n"))  {
+					break;
+				}
+			else {
+				System.out.println("Diese Eingabe ist nicht zulässig!");
+			}
 		
+			
 		
+		} while (true);
 	}
 
 }
+
